@@ -1,0 +1,63 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/api-evangelist/google-play-console/refs/heads/main/json-schema/json-schema.yml
+title: Google Play Developer Reporting API Schema
+description: >-
+  JSON Schema for the Google Play Developer Reporting API covering apps,
+  metric sets, and reporting resources.
+type: object
+properties:
+  App:
+    type: object
+    properties:
+      name:
+        type: string
+        description: The resource name of the app.
+      packageName:
+        type: string
+        description: The app package name.
+      displayName:
+        type: string
+        description: The display name of the app.
+    required:
+      - name
+      - packageName
+  MetricSet:
+    type: object
+    properties:
+      name:
+        type: string
+        description: The resource name of the metric set.
+      freshnessPeriod:
+        type: string
+        description: The expected freshness period.
+      metrics:
+        type: array
+        items:
+          type: object
+          properties:
+            metricId:
+              type: string
+            decimalPrecision:
+              type: integer
+    required:
+      - name
+  TimelineMetric:
+    type: object
+    properties:
+      metricId:
+        type: string
+        description: Identifier of the metric.
+      timelineSpec:
+        type: object
+        properties:
+          aggregationPeriod:
+            type: string
+            enum:
+              - DAILY
+              - HOURLY
+          startTime:
+            type: string
+            format: date-time
+          endTime:
+            type: string
+            format: date-time

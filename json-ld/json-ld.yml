@@ -1,0 +1,13 @@
+"@context":
+  "@vocab": https://schema.org/
+  gplayconsole: https://developers.google.com/play/developer/reporting/reference/rest/
+  name: schema:name
+  description: schema:description
+  url: schema:url
+  packageName: gplayconsole:packageName
+  displayName: gplayconsole:displayName
+  metricId: gplayconsole:metricId
+  freshnessPeriod: gplayconsole:freshnessPeriod
+  crashRate: gplayconsole:crashRate
+  anrRate: gplayconsole:anrRate
+  aggregationPeriod: gplayconsole:aggregationPeriod

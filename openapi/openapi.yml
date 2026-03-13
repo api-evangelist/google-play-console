@@ -1,0 +1,146 @@
+openapi: 3.1.0
+info:
+  title: Google Play Developer Reporting API
+  description: >-
+    The Play Developer Reporting API provides programmatic access to Play Console
+    reporting data, including app quality metrics such as crash rates, ANR rates,
+    and other performance indicators.
+  version: v1alpha1
+  contact:
+    name: Google
+    url: https://developers.google.com/play/developer/reporting
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+  - url: https://playdeveloperreporting.googleapis.com
+    description: Play Developer Reporting API server
+paths:
+  /v1alpha1/apps:search:
+    get:
+      summary: Search apps
+      description: Searches for apps accessible by the caller.
+      operationId: searchApps
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchAppsResponse'
+  /v1alpha1/{name}/crashRateMetricSet:
+    get:
+      summary: Get crash rate metric set
+      description: Describes the properties of the crash rate metric set.
+      operationId: getCrashRateMetricSet
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MetricSet'
+  /v1alpha1/{name}/anrRateMetricSet:
+    get:
+      summary: Get ANR rate metric set
+      description: Describes the properties of the ANR rate metric set.
+      operationId: getAnrRateMetricSet
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MetricSet'
+  /v1alpha1/{name}/errorCountMetricSet:
+    get:
+      summary: Get error count metric set
+      description: Describes the properties of the error count metric set.
+      operationId: getErrorCountMetricSet
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MetricSet'
+components:
+  schemas:
+    App:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The resource name.
+        packageName:
+          type: string
+          description: The app package name.
+        displayName:
+          type: string
+          description: The app display name.
+    SearchAppsResponse:
+      type: object
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/App'
+        nextPageToken:
+          type: string
+    MetricSet:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The resource name of the metric set.
+        freshnessPeriod:
+          type: string
+          description: The expected freshness period for the metric set.
+        metrics:
+          type: array
+          items:
+            type: object
+            properties:
+              metricId:
+                type: string
+              decimalPrecision:
+                type: integer
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/playdeveloperreporting: Access Play developer reporting data
+security:
+  - oauth2:
+      - https://www.googleapis.com/auth/playdeveloperreporting
