@@ -1,5 +1,5 @@
 aid: google-play-console
-name: Google Play Console Developer Reporting API
+name: Google Play Console Developer Reporting
 description: >-
   The Google Play Developer Reporting API provides programmatic access to Play
   Console data for app performance metrics, error reports, and quality insights.
