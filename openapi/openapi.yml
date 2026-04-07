@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: Google Play Developer Reporting API
+  title: Google Play Console Developer Reporting Google Play Developer Reporting API
   description: >-
     The Play Developer Reporting API provides programmatic access to Play Console
     reporting data, including app quality metrics such as crash rates, ANR rates,
@@ -18,7 +18,7 @@ servers:
 paths:
   /v1alpha1/apps:search:
     get:
-      summary: Search apps
+      summary: Google Play Console Developer Reporting Search apps
       description: Searches for apps accessible by the caller.
       operationId: searchApps
       parameters:
@@ -39,7 +39,7 @@ paths:
                 $ref: '#/components/schemas/SearchAppsResponse'
   /v1alpha1/{name}/crashRateMetricSet:
     get:
-      summary: Get crash rate metric set
+      summary: Google Play Console Developer Reporting Get crash rate metric set
       description: Describes the properties of the crash rate metric set.
       operationId: getCrashRateMetricSet
       parameters:
@@ -57,7 +57,7 @@ paths:
                 $ref: '#/components/schemas/MetricSet'
   /v1alpha1/{name}/anrRateMetricSet:
     get:
-      summary: Get ANR rate metric set
+      summary: Google Play Console Developer Reporting Get ANR rate metric set
       description: Describes the properties of the ANR rate metric set.
       operationId: getAnrRateMetricSet
       parameters:
@@ -75,7 +75,7 @@ paths:
                 $ref: '#/components/schemas/MetricSet'
   /v1alpha1/{name}/errorCountMetricSet:
     get:
-      summary: Get error count metric set
+      summary: Google Play Console Developer Reporting Get error count metric set
       description: Describes the properties of the error count metric set.
       operationId: getErrorCountMetricSet
       parameters:
