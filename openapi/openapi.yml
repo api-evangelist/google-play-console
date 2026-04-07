@@ -37,6 +37,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SearchAppsResponse'
+      tags:
+        - V1alpha1
   /v1alpha1/{name}/crashRateMetricSet:
     get:
       summary: Google Play Console Developer Reporting Get crash rate metric set
@@ -55,6 +57,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MetricSet'
+      tags:
+        - V1alpha1
   /v1alpha1/{name}/anrRateMetricSet:
     get:
       summary: Google Play Console Developer Reporting Get ANR rate metric set
@@ -73,6 +77,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MetricSet'
+      tags:
+        - V1alpha1
   /v1alpha1/{name}/errorCountMetricSet:
     get:
       summary: Google Play Console Developer Reporting Get error count metric set
@@ -91,6 +97,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MetricSet'
+      tags:
+        - V1alpha1
 components:
   schemas:
     App:
@@ -144,3 +152,5 @@ components:
 security:
   - oauth2:
       - https://www.googleapis.com/auth/playdeveloperreporting
+tags:
+  - name: V1alpha1

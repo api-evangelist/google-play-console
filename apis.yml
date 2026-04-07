@@ -12,12 +12,12 @@ modified: '2026-03-16'
 specificationVersion: '0.19'
 type: Index
 tags:
+  - Analytics
   - Android
   - Apps
-  - Analytics
-  - Reporting
-  - Quality
   - Google Play Console
+  - Quality
+  - Reporting
 apis:
   - name: Google Play Developer Reporting API
     description: >-
