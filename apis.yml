@@ -38,6 +38,8 @@ apis:
       - type: JSONLD
         url: json-ld/json-ld.yml
 common:
+  - type: OAuthScopes
+    url: scopes/google-play-console-scopes.yml
   - type: Portal
     url: https://play.google.com/console
   - type: GettingStarted
