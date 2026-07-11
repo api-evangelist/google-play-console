@@ -38,6 +38,12 @@ apis:
       - type: JSONLD
         url: json-ld/json-ld.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-play-console-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-play-console-domain-security.yml
+  - type: Authentication
+    url: authentication/google-play-console-authentication.yml
   - type: OAuthScopes
     url: scopes/google-play-console-scopes.yml
   - type: Portal
