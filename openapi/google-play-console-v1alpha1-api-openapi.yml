@@ -1,10 +1,7 @@
 openapi: 3.1.0
 info:
-  title: Google Play Console Developer Reporting Google Play Developer Reporting API
-  description: >-
-    The Play Developer Reporting API provides programmatic access to Play Console
-    reporting data, including app quality metrics such as crash rates, ANR rates,
-    and other performance indicators.
+  title: Google Play Console Developer Reporting Google Play Developer Reporting V1alpha1 API
+  description: The Play Developer Reporting API provides programmatic access to Play Console reporting data, including app quality metrics such as crash rates, ANR rates, and other performance indicators.
   version: v1alpha1
   contact:
     name: Google
@@ -13,8 +10,13 @@ info:
     name: Google APIs Terms of Service
     url: https://developers.google.com/terms
 servers:
-  - url: https://playdeveloperreporting.googleapis.com
-    description: Play Developer Reporting API server
+- url: https://playdeveloperreporting.googleapis.com
+  description: Play Developer Reporting API server
+security:
+- oauth2:
+  - https://www.googleapis.com/auth/playdeveloperreporting
+tags:
+- name: V1alpha1
 paths:
   /v1alpha1/apps:search:
     get:
@@ -22,14 +24,14 @@ paths:
       description: Searches for apps accessible by the caller.
       operationId: searchApps
       parameters:
-        - name: pageSize
-          in: query
-          schema:
-            type: integer
-        - name: pageToken
-          in: query
-          schema:
-            type: string
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+      - name: pageToken
+        in: query
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -38,18 +40,18 @@ paths:
               schema:
                 $ref: '#/components/schemas/SearchAppsResponse'
       tags:
-        - V1alpha1
+      - V1alpha1
   /v1alpha1/{name}/crashRateMetricSet:
     get:
       summary: Google Play Console Developer Reporting Get crash rate metric set
       description: Describes the properties of the crash rate metric set.
       operationId: getCrashRateMetricSet
       parameters:
-        - name: name
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -58,18 +60,18 @@ paths:
               schema:
                 $ref: '#/components/schemas/MetricSet'
       tags:
-        - V1alpha1
+      - V1alpha1
   /v1alpha1/{name}/anrRateMetricSet:
     get:
       summary: Google Play Console Developer Reporting Get ANR rate metric set
       description: Describes the properties of the ANR rate metric set.
       operationId: getAnrRateMetricSet
       parameters:
-        - name: name
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -78,18 +80,18 @@ paths:
               schema:
                 $ref: '#/components/schemas/MetricSet'
       tags:
-        - V1alpha1
+      - V1alpha1
   /v1alpha1/{name}/errorCountMetricSet:
     get:
       summary: Google Play Console Developer Reporting Get error count metric set
       description: Describes the properties of the error count metric set.
       operationId: getErrorCountMetricSet
       parameters:
-        - name: name
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -98,9 +100,18 @@ paths:
               schema:
                 $ref: '#/components/schemas/MetricSet'
       tags:
-        - V1alpha1
+      - V1alpha1
 components:
   schemas:
+    SearchAppsResponse:
+      type: object
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/App'
+        nextPageToken:
+          type: string
     App:
       type: object
       properties:
@@ -113,15 +124,6 @@ components:
         displayName:
           type: string
           description: The app display name.
-    SearchAppsResponse:
-      type: object
-      properties:
-        apps:
-          type: array
-          items:
-            $ref: '#/components/schemas/App'
-        nextPageToken:
-          type: string
     MetricSet:
       type: object
       properties:
@@ -149,8 +151,3 @@ components:
           tokenUrl: https://oauth2.googleapis.com/token
           scopes:
             https://www.googleapis.com/auth/playdeveloperreporting: Access Play developer reporting data
-security:
-  - oauth2:
-      - https://www.googleapis.com/auth/playdeveloperreporting
-tags:
-  - name: V1alpha1
