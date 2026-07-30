@@ -4,7 +4,20 @@ description: >-
   The Google Play Developer Reporting API provides programmatic access to Play Console data for app performance metrics,
   error reports, and quality insights. It enables developers to build automated workflows and integrate Play Console
   analytics into internal business reporting and analysis systems.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-play-console.png
 url: https://raw.githubusercontent.com/api-evangelist/google-play-console/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -18,26 +31,30 @@ tags:
   - Quality
   - Reporting
 apis:
-  - name: Google Play Developer Reporting API
-    description: >-
-      The Play Developer Reporting API enables automated reporting and analysis of app performance data from Google Play
-      Console, including crash rates, ANR rates, and other quality metrics.
-    humanURL: https://developers.google.com/play/developer/reporting
-    baseURL: https://playdeveloperreporting.googleapis.com
-    properties:
-      - type: Documentation
-        url: https://developers.google.com/play/developer/reporting/reference/rest
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: Authentication
-        url: https://developers.google.com/play/developer/reporting/getting-started
-      - type: GettingStarted
-        url: https://developers.google.com/play/developer/reporting/getting-started
-      - type: JSONSchema
-        url: json-schema/json-schema.yml
-      - type: JSONLD
-        url: json-ld/json-ld.yml
+- aid: google-play-console:google-play-console-v1alpha1-api
+  name: Google Play Console Developer Reporting V1alpha1 API
+  description: >-
+    The V1alpha1 API from Google Play Console Developer Reporting — 4 operation(s) for v1alpha1.
+  humanURL: https://developers.google.com/play/developer/reporting
+  baseURL: https://playdeveloperreporting.googleapis.com
+  tags:
+  - V1alpha1
+  properties:
+  - type: OpenAPI
+    url: openapi/google-play-console-v1alpha1-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/play/developer/reporting/reference/rest
+  - type: Authentication
+    url: https://developers.google.com/play/developer/reporting/getting-started
+  - type: GettingStarted
+    url: https://developers.google.com/play/developer/reporting/getting-started
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-play-console-developer-reporting/overview
   - type: AgenticAccess
     url: agentic-access/google-play-console-agentic-access.yml
   - type: VulnerabilityDisclosure
