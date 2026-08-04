@@ -1,0 +1,464 @@
+{
+  "info": {
+    "_postman_id": "81bdbefa-b1ff-4c4a-a272-fd247bc3bfdc",
+    "name": "Google Play Console Developer Reporting Google Play Developer Reporting V1alpha1 API",
+    "description": "The Play Developer Reporting API provides programmatic access to Play Console reporting data, including app quality metrics such as crash rates, ANR rates, and other performance indicators.\n\nContact Support:\n Name: Google",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:49:56.000Z",
+    "updatedAt": "2026-07-28T01:49:56.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-81bdbefa-b1ff-4c4a-a272-fd247bc3bfdc"
+  },
+  "item": [
+    {
+      "name": "v1alpha1",
+      "item": [
+        {
+          "name": "apps:search",
+          "item": [
+            {
+              "name": "Google Play Console Developer Reporting Search apps",
+              "id": "c6c822e0-95dd-4c66-8880-3dc884e94295",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/v1alpha1/apps:search?pageSize=<integer>&pageToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "v1alpha1",
+                    "apps:search"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageSize",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    }
+                  ]
+                },
+                "description": "Searches for apps accessible by the caller."
+              },
+              "response": [
+                {
+                  "id": "167a2490-50d7-4937-8fd9-56bd3c73a874",
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/v1alpha1/apps:search?pageSize=<integer>&pageToken=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1alpha1",
+                        "apps:search"
+                      ],
+                      "query": [
+                        {
+                          "key": "pageSize",
+                          "value": "<integer>"
+                        },
+                        {
+                          "key": "pageToken",
+                          "value": "<string>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"apps\": [\n    {\n      \"name\": \"<string>\",\n      \"packageName\": \"<string>\",\n      \"displayName\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"packageName\": \"<string>\",\n      \"displayName\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                  "createdAt": "2026-07-28T01:49:57.000Z",
+                  "updatedAt": "2026-07-28T01:49:57.000Z",
+                  "uid": "35240-167a2490-50d7-4937-8fd9-56bd3c73a874"
+                }
+              ],
+              "createdAt": "2026-07-28T01:49:57.000Z",
+              "updatedAt": "2026-07-28T01:49:57.000Z",
+              "uid": "35240-c6c822e0-95dd-4c66-8880-3dc884e94295"
+            }
+          ],
+          "id": "07c7dc7c-045a-49cc-9e56-22076c0d15cd",
+          "createdAt": "2026-07-28T01:49:57.000Z",
+          "updatedAt": "2026-07-28T01:49:57.000Z",
+          "uid": "35240-07c7dc7c-045a-49cc-9e56-22076c0d15cd"
+        },
+        {
+          "name": "{name}",
+          "item": [
+            {
+              "name": "crashRateMetricSet",
+              "item": [
+                {
+                  "name": "Google Play Console Developer Reporting Get crash rate metric set",
+                  "id": "50fc16a1-0038-48ed-9288-d48fdbfc39d7",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/v1alpha1/:name/crashRateMetricSet",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1alpha1",
+                        ":name",
+                        "crashRateMetricSet"
+                      ],
+                      "variable": [
+                        {
+                          "id": "85b18123-1e52-4c6f-b7e0-dbf375521696",
+                          "key": "name",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Describes the properties of the crash rate metric set."
+                  },
+                  "response": [
+                    {
+                      "id": "bcc9f94d-dfcd-4dd1-857c-cbc103e6f667",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v1alpha1/:name/crashRateMetricSet",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1alpha1",
+                            ":name",
+                            "crashRateMetricSet"
+                          ],
+                          "variable": [
+                            {
+                              "key": "name"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"name\": \"<string>\",\n  \"freshnessPeriod\": \"<string>\",\n  \"metrics\": [\n    {\n      \"metricId\": \"<string>\",\n      \"decimalPrecision\": \"<integer>\"\n    },\n    {\n      \"metricId\": \"<string>\",\n      \"decimalPrecision\": \"<integer>\"\n    }\n  ]\n}",
+                      "createdAt": "2026-07-28T01:49:57.000Z",
+                      "updatedAt": "2026-07-28T01:49:57.000Z",
+                      "uid": "35240-bcc9f94d-dfcd-4dd1-857c-cbc103e6f667"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:49:57.000Z",
+                  "updatedAt": "2026-07-28T01:49:57.000Z",
+                  "uid": "35240-50fc16a1-0038-48ed-9288-d48fdbfc39d7"
+                }
+              ],
+              "id": "e666dba7-fb9c-467f-8741-7b7cfc0941f1",
+              "createdAt": "2026-07-28T01:49:57.000Z",
+              "updatedAt": "2026-07-28T01:49:57.000Z",
+              "uid": "35240-e666dba7-fb9c-467f-8741-7b7cfc0941f1"
+            },
+            {
+              "name": "anrRateMetricSet",
+              "item": [
+                {
+                  "name": "Google Play Console Developer Reporting Get ANR rate metric set",
+                  "id": "88f6d48b-4ad3-4041-89f6-a2e84324a862",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/v1alpha1/:name/anrRateMetricSet",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1alpha1",
+                        ":name",
+                        "anrRateMetricSet"
+                      ],
+                      "variable": [
+                        {
+                          "id": "31ac13da-8fc4-4f95-b554-704aa6433b61",
+                          "key": "name",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Describes the properties of the ANR rate metric set."
+                  },
+                  "response": [
+                    {
+                      "id": "3db3574e-571b-4e79-a19d-e9043c996c73",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v1alpha1/:name/anrRateMetricSet",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1alpha1",
+                            ":name",
+                            "anrRateMetricSet"
+                          ],
+                          "variable": [
+                            {
+                              "key": "name"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"name\": \"<string>\",\n  \"freshnessPeriod\": \"<string>\",\n  \"metrics\": [\n    {\n      \"metricId\": \"<string>\",\n      \"decimalPrecision\": \"<integer>\"\n    },\n    {\n      \"metricId\": \"<string>\",\n      \"decimalPrecision\": \"<integer>\"\n    }\n  ]\n}",
+                      "createdAt": "2026-07-28T01:49:57.000Z",
+                      "updatedAt": "2026-07-28T01:49:57.000Z",
+                      "uid": "35240-3db3574e-571b-4e79-a19d-e9043c996c73"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:49:57.000Z",
+                  "updatedAt": "2026-07-28T01:49:57.000Z",
+                  "uid": "35240-88f6d48b-4ad3-4041-89f6-a2e84324a862"
+                }
+              ],
+              "id": "c23994bc-0ed0-4024-8010-bc6b01a9efb8",
+              "createdAt": "2026-07-28T01:49:57.000Z",
+              "updatedAt": "2026-07-28T01:49:57.000Z",
+              "uid": "35240-c23994bc-0ed0-4024-8010-bc6b01a9efb8"
+            },
+            {
+              "name": "errorCountMetricSet",
+              "item": [
+                {
+                  "name": "Google Play Console Developer Reporting Get error count metric set",
+                  "id": "2e7ac4cd-b51a-4415-a8f4-268d4751863b",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/v1alpha1/:name/errorCountMetricSet",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "v1alpha1",
+                        ":name",
+                        "errorCountMetricSet"
+                      ],
+                      "variable": [
+                        {
+                          "id": "dbda7027-ec27-46bf-bb0c-b0845c7d3b23",
+                          "key": "name",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Describes the properties of the error count metric set."
+                  },
+                  "response": [
+                    {
+                      "id": "dcc96407-45ea-46c2-9a7c-187e02979003",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/v1alpha1/:name/errorCountMetricSet",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "v1alpha1",
+                            ":name",
+                            "errorCountMetricSet"
+                          ],
+                          "variable": [
+                            {
+                              "key": "name"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"name\": \"<string>\",\n  \"freshnessPeriod\": \"<string>\",\n  \"metrics\": [\n    {\n      \"metricId\": \"<string>\",\n      \"decimalPrecision\": \"<integer>\"\n    },\n    {\n      \"metricId\": \"<string>\",\n      \"decimalPrecision\": \"<integer>\"\n    }\n  ]\n}",
+                      "createdAt": "2026-07-28T01:49:57.000Z",
+                      "updatedAt": "2026-07-28T01:49:57.000Z",
+                      "uid": "35240-dcc96407-45ea-46c2-9a7c-187e02979003"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:49:57.000Z",
+                  "updatedAt": "2026-07-28T01:49:57.000Z",
+                  "uid": "35240-2e7ac4cd-b51a-4415-a8f4-268d4751863b"
+                }
+              ],
+              "id": "5226bc85-fa50-42ec-b7ef-cb23f667a1ec",
+              "createdAt": "2026-07-28T01:49:57.000Z",
+              "updatedAt": "2026-07-28T01:49:57.000Z",
+              "uid": "35240-5226bc85-fa50-42ec-b7ef-cb23f667a1ec"
+            }
+          ],
+          "id": "edfc29ff-05b2-4bca-8044-8cd2c3edf78d",
+          "createdAt": "2026-07-28T01:49:57.000Z",
+          "updatedAt": "2026-07-28T01:49:57.000Z",
+          "uid": "35240-edfc29ff-05b2-4bca-8044-8cd2c3edf78d"
+        }
+      ],
+      "id": "78dd8232-4013-4c30-8f0e-eeaeb6ae21fe",
+      "createdAt": "2026-07-28T01:49:57.000Z",
+      "updatedAt": "2026-07-28T01:49:57.000Z",
+      "uid": "35240-78dd8232-4013-4c30-8f0e-eeaeb6ae21fe"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/playdeveloperreporting",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://playdeveloperreporting.googleapis.com"
+    }
+  ]
+}
