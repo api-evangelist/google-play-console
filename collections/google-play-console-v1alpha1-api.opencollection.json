@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Play Console Developer Reporting Google Play Developer Reporting V1alpha1 API",
+    "version": "v1alpha1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "V1alpha1",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Play Console Developer Reporting Search apps",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://playdeveloperreporting.googleapis.com/v1alpha1/apps:search",
+            "params": [
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pageToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Searches for apps accessible by the caller."
+        },
+        {
+          "info": {
+            "name": "Google Play Console Developer Reporting Get crash rate metric set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://playdeveloperreporting.googleapis.com/v1alpha1/:name/crashRateMetricSet",
+            "params": [
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Describes the properties of the crash rate metric set."
+        },
+        {
+          "info": {
+            "name": "Google Play Console Developer Reporting Get ANR rate metric set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://playdeveloperreporting.googleapis.com/v1alpha1/:name/anrRateMetricSet",
+            "params": [
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Describes the properties of the ANR rate metric set."
+        },
+        {
+          "info": {
+            "name": "Google Play Console Developer Reporting Get error count metric set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://playdeveloperreporting.googleapis.com/v1alpha1/:name/errorCountMetricSet",
+            "params": [
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Describes the properties of the error count metric set."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

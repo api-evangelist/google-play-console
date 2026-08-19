@@ -1,0 +1,447 @@
+{
+  "item": [
+    {
+      "id": "1ab0b396-de17-4ed5-9966-a626545a329a",
+      "name": "V1alpha1",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1eacd68a-1407-4f6e-9d09-a8a2bd2b54f2",
+          "name": "Google Play Console Developer Reporting Search apps",
+          "request": {
+            "name": "Google Play Console Developer Reporting Search apps",
+            "description": {
+              "content": "Searches for apps accessible by the caller.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1alpha1",
+                "apps:search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ffd1e8c6-b603-4f2b-9e9e-8e67bdbb3c01",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1alpha1",
+                    "apps:search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageSize",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"apps\": [\n    {\n      \"name\": \"string\",\n      \"packageName\": \"string\",\n      \"displayName\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"packageName\": \"string\",\n      \"displayName\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3825a02f-bb4e-4d78-bec2-435b069919c3",
+          "name": "Google Play Console Developer Reporting Get crash rate metric set",
+          "request": {
+            "name": "Google Play Console Developer Reporting Get crash rate metric set",
+            "description": {
+              "content": "Describes the properties of the crash rate metric set.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1alpha1",
+                ":name",
+                "crashRateMetricSet"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8dbcf409-ced3-40dd-bec2-a42c85dc6699",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1alpha1",
+                    ":name",
+                    "crashRateMetricSet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"freshnessPeriod\": \"string\",\n  \"metrics\": [\n    {\n      \"metricId\": \"string\",\n      \"decimalPrecision\": 5446\n    },\n    {\n      \"metricId\": \"string\",\n      \"decimalPrecision\": 92\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "55bbbf60-07f3-4fd3-b435-4b8b803834b4",
+          "name": "Google Play Console Developer Reporting Get ANR rate metric set",
+          "request": {
+            "name": "Google Play Console Developer Reporting Get ANR rate metric set",
+            "description": {
+              "content": "Describes the properties of the ANR rate metric set.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1alpha1",
+                ":name",
+                "anrRateMetricSet"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8638f5ef-eb76-40f7-a103-15068ea93105",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1alpha1",
+                    ":name",
+                    "anrRateMetricSet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"freshnessPeriod\": \"string\",\n  \"metrics\": [\n    {\n      \"metricId\": \"string\",\n      \"decimalPrecision\": 5446\n    },\n    {\n      \"metricId\": \"string\",\n      \"decimalPrecision\": 92\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2cd4670b-c629-4420-aa5a-2b04321f49da",
+          "name": "Google Play Console Developer Reporting Get error count metric set",
+          "request": {
+            "name": "Google Play Console Developer Reporting Get error count metric set",
+            "description": {
+              "content": "Describes the properties of the error count metric set.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1alpha1",
+                ":name",
+                "errorCountMetricSet"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "name",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dbd206d7-dbc2-4023-9858-ac522ce82e16",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1alpha1",
+                    ":name",
+                    "errorCountMetricSet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "name",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"freshnessPeriod\": \"string\",\n  \"metrics\": [\n    {\n      \"metricId\": \"string\",\n      \"decimalPrecision\": 5446\n    },\n    {\n      \"metricId\": \"string\",\n      \"decimalPrecision\": 92\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://playdeveloperreporting.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/playdeveloperreporting"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2fe151e3-df0d-43a2-9388-c343489e18ba",
+    "name": "Google Play Console Developer Reporting Google Play Developer Reporting V1alpha1 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Play Developer Reporting API provides programmatic access to Play Console reporting data, including app quality metrics such as crash rates, ANR rates, and other performance indicators.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}
