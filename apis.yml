@@ -4,6 +4,18 @@ description: >-
   The Google Play Developer Reporting API provides programmatic access to Play Console data for app performance metrics,
   error reports, and quality insights. It enables developers to build automated workflows and integrate Play Console
   analytics into internal business reporting and analysis systems.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
