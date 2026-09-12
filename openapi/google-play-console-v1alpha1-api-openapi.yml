@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Google Play Console Developer Reporting Google Play Developer Reporting V1alpha1 API
   description: The Play Developer Reporting API provides programmatic access to Play Console reporting data, including app quality metrics such as crash rates, ANR rates, and other performance indicators.
@@ -103,27 +103,6 @@ paths:
       - V1alpha1
 components:
   schemas:
-    SearchAppsResponse:
-      type: object
-      properties:
-        apps:
-          type: array
-          items:
-            $ref: '#/components/schemas/App'
-        nextPageToken:
-          type: string
-    App:
-      type: object
-      properties:
-        name:
-          type: string
-          description: The resource name.
-        packageName:
-          type: string
-          description: The app package name.
-        displayName:
-          type: string
-          description: The app display name.
     MetricSet:
       type: object
       properties:
@@ -142,6 +121,27 @@ components:
                 type: string
               decimalPrecision:
                 type: integer
+    App:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The resource name.
+        packageName:
+          type: string
+          description: The app package name.
+        displayName:
+          type: string
+          description: The app display name.
+    SearchAppsResponse:
+      type: object
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/App'
+        nextPageToken:
+          type: string
   securitySchemes:
     oauth2:
       type: oauth2
