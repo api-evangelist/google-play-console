@@ -103,6 +103,15 @@ paths:
       - V1alpha1
 components:
   schemas:
+    SearchAppsResponse:
+      type: object
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/App'
+        nextPageToken:
+          type: string
     App:
       type: object
       properties:
@@ -133,15 +142,6 @@ components:
                 type: string
               decimalPrecision:
                 type: integer
-    SearchAppsResponse:
-      type: object
-      properties:
-        apps:
-          type: array
-          items:
-            $ref: '#/components/schemas/App'
-        nextPageToken:
-          type: string
   securitySchemes:
     oauth2:
       type: oauth2
