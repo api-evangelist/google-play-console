@@ -115,6 +115,15 @@ components:
         displayName:
           type: string
           description: The app display name.
+    SearchAppsResponse:
+      type: object
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/App'
+        nextPageToken:
+          type: string
     MetricSet:
       type: object
       properties:
@@ -133,15 +142,6 @@ components:
                 type: string
               decimalPrecision:
                 type: integer
-    SearchAppsResponse:
-      type: object
-      properties:
-        apps:
-          type: array
-          items:
-            $ref: '#/components/schemas/App'
-        nextPageToken:
-          type: string
   securitySchemes:
     oauth2:
       type: oauth2
