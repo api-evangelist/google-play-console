@@ -1,4 +1,4 @@
-# Google Play Console Developer Reporting (google-play-console)
+# Google Play Console Developer Reporting
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,60 +66,134 @@
 
 The Google Play Developer Reporting API provides programmatic access to Play Console data for app performance metrics, error reports, and quality insights. It enables developers to build automated workflows and integrate Play Console analytics into internal business reporting and analysis systems.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-play-console/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-play-console/refs/heads/main/apis.yml)
+**Areas:** Analytics · Android · Application · Google Play Console · Quality · Reporting
 
-## Scope
+## Google Play Console Developer Reporting on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Play Console Developer Reporting is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-play-console/](https://apis.io/providers/google-play-console/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Analytics
-- Android
-- Apps
-- Google Play Console
-- Quality
-- Reporting
+- [Google Play Console Developer Reporting V1alpha1 API](https://apis.io/apis/google-play-console/google-play-console-v1alpha1-api/) — The V1alpha1 API from Google Play Console Developer Reporting — 4 operation(s) for v1alpha1.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Play Developer Reporting API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Play Developer Reporting API enables automated reporting and analysis of app performance data from Google Play Console, including crash rates, ANR rates, and other quality metrics.
+- [Google Play Console Agentic Access](https://apis.io/agentic-access/google-play-console/google-play-console-agentic-access/)
 
-- **Human URL:** [https://developers.google.com/play/developer/reporting](https://developers.google.com/play/developer/reporting)
-- **Base URL:** `https://playdeveloperreporting.googleapis.com`
+#### Collections (3)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://developers.google.com/play/developer/reporting/reference/rest)
-- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Authentication](https://developers.google.com/play/developer/reporting/getting-started)
-- [Getting Started](https://developers.google.com/play/developer/reporting/getting-started)
-- [JSON Schema](json-schema/json-schema.yml) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/json-ld.yml) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Google Play Console Developer Reporting Google Play Developer Reporting V1alpha1 API](https://apis.io/collections/google-play-console/open-google-play-console-v1alpha1-api/)
+- [Google Play Console Developer Reporting Google Play Developer Reporting API](https://apis.io/collections/google-play-console/open-openapi/)
+- [Google Play Console Developer Reporting Google Play Developer Reporting V1alpha1 API](https://apis.io/collections/google-play-console/postman-google-play-console-v1alpha1-api/)
 
-## Common Properties
+#### Governance rules (1)
 
-- [Portal](https://play.google.com/console)
-- [Getting Started](https://developers.google.com/play/developer/reporting/getting-started)
+Spectral rulesets for the provider's contracts.
+
+- [Google Play Console Developer Reporting — jsonschema rules](https://apis.io/rules/google-play-console/google-play-console-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Play Console Authentication](https://apis.io/security/google-play-console/google-play-console-authentication/)
+- [Google Play Console Domain Security](https://apis.io/security/google-play-console/google-play-console-domain-security/)
+- [Google Play Console Vulnerability Disclosure](https://apis.io/security/google-play-console/google-play-console-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Google Play Console Scopes](https://apis.io/scopes/google-play-console/google-play-console-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Play Console Plans Pricing](https://apis.io/plans/google-play-console/google-play-console-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Play Console Rate Limits](https://apis.io/rate-limits/google-play-console/google-play-console-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Play Console Finops](https://apis.io/finops/google-play-console/google-play-console-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://developers.google.com/play/developer/reporting)
-- [Authentication](https://developers.google.com/play/developer/reporting/getting-started)
+- [Getting started](https://developers.google.com/play/developer/reporting/getting-started)
 - [Pricing](https://play.google.com/console/about/pricing/)
-- [Terms of Service](https://play.google.com/about/developer-distribution-agreement.html)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
 - [Support](https://developers.google.com/play/developer/reporting/support)
-- [JSON-LD](json-ld/json-ld.yml) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Terms of service](https://play.google.com/about/developer-distribution-agreement.html)
+- [Privacy policy](https://policies.google.com/privacy)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 36.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 52.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 20.2 |
+| Access clarity | 28.9 |
+
+**Agent readiness 26.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-play-console/](https://apis.io/providers/google-play-console/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Play Console Developer Reporting: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-play-console/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
